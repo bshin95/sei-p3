@@ -4,7 +4,7 @@
 
 # Description
 
-This is an Airbnb-based app built on Ruby on Rails integrating React as the front-end. The objective of the app is to allow users to listing their property for rental for a duration of time. Users can be split into two categories either: hosts or temporary tenants. Tenants can explore listings on the app and book houses, apartments, condos, studios, etc by contacting the host. 
+This is an Airbnb-based app built on Ruby on Rails integrating React as the front-end. The objective of the app is to allow users to listing their property for rental for a duration of time. Users can be split into two categories either: hosts or temporary tenants. Tenants can explore listings on the app and book houses, apartments, condos, studios, etc by contacting the host.
 
 # MVP Goals
 
@@ -21,6 +21,10 @@ For Post-MVP, I would like to get rid of the contact form or a form to submit to
 Other interesting tools/functionalities I'd also like to add are a calendar to book places, a calculator tool for homeowners to figure out monthly revenue based on the location (similar to the Airbnb app), and possibly add activites to also do in the area of the home.
 
 # Wireframes
+
+## ERD Diagram
+
+https://drive.google.com/open?id=1IPTCaeEo87YevEJzRbVJLs_Bd_J6Q_li
 
 ## Potential color combos:
 
