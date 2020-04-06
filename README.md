@@ -1,5 +1,7 @@
 # Airbnb App
 
+![Airbnb](https://evckmir.files.wordpress.com/2020/03/air-bnb.jpg?w=1120)
+
 # Description
 
 This is an Airbnb-based app built on Ruby on Rails integrating React as the front-end.
@@ -16,11 +18,12 @@ Each property must be assigned to one user, meaning that a single individual use
 
 For Post-MVP, I would like to get rid of the contact form or a form to submit to the owner. Eventually, the app should be functioning like Airbnb and allow users to book properites directly on the app.
 
-Other interesting tools/functionalities I'd also like to add are a calendar to book places, a calculator tool for homeowners to figure out monthly revenue based on the location (similar to the Airbnb app), and possibly add activites to also do in the area of the home. 
+Other interesting tools/functionalities I'd also like to add are a calendar to book places, a calculator tool for homeowners to figure out monthly revenue based on the location (similar to the Airbnb app), and possibly add activites to also do in the area of the home.
 
 # Wireframes
 
 ## Webpage Design:
+
 Homepage - https://xd.adobe.com/view/4fc912d5-2673-4308-753f-d8a513c6b80f-39f8/
 
 Signup page - https://xd.adobe.com/view/48022d83-c9d8-4828-463c-81e3531b8929-3e33/
@@ -35,8 +38,6 @@ User listings - https://xd.adobe.com/view/f0d17ad8-ed0a-4437-45e1-0ad800a78e63-8
 
 User indivdual listing - https://xd.adobe.com/view/673abb55-bcde-43a6-7ec8-604665344def-110b/
 
-
-
 # Component heirarchy
 
 Built on lucidchart - https://www.lucidchart.com/invitations/accept/e66b4424-599a-43b9-b20b-daf97678e01e
@@ -46,8 +47,6 @@ Built on lucidchart - https://www.lucidchart.com/invitations/accept/e66b4424-599
 The Airbnb App is built on Ruby on Rails as the backend and integrates React as the frontend.
 
 ## List of server-side routes
-
-
 
 # Major challenges Expected:
 
