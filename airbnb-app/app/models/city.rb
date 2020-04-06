@@ -1,3 +1,3 @@
 class City < ApplicationRecord
-  belongs_to :property
+  has_many :properties, dependent: :destroy
 end

@@ -76,68 +76,54 @@ User.create!(
 )
 p "Created #{User.count} users"
 
+newyork = City.create(
+  {
+    name: "New York",
+    state: "New York",
+    country: "United States"
+  }
+)
+p "Created #{City.count} cities"
 
 Property.create!(
   address: "99 Pleasant Drive",
-  city: "Brooklyn",
-  state: "New York",
-  country: "United States",
   zipcode: "11111",
-  user_id: 1
+  user_id: 1,
+  city_id: 1
 )
 
 Property.create!(
   address: "45 Sunset Blvd.",
-  city: "Brooklyn",
-  state: "New York",
-  country: "United States",
   zipcode: "11111",
-  user_id: 1
+  user_id: 1,
+  city_id: 1
 )
 
 Property.create!(
   address: "54 Thunder Place",
-  city: "Kansas City",
-  state: "Missouri",
-  country: "United States",
   zipcode: "09865",
-  user_id: 2
+  user_id: 2,
+  city_id: 1
 )
 
 Property.create!(
   address: "17 Scenic Road",
-  city: "Mexico City",
-  state: "",
-  country: "Mexico",
   zipcode: "96432",
-  user_id: 3
+  user_id: 3,
+  city_id: 1
 )
 
 Property.create!(
   address: "1076 Hilltop Drive",
-  city: "Berlin",
-  state: "",
-  country: "Germany",
   zipcode: "98123",
-  user_id: 4
+  user_id: 4,
+  city_id: 1,
 )
 
 Property.create!(
   address: "7000 Greater Street",
-  city: "Tokyo",
-  state: "",
-  country: "Japan",
   zipcode: "11111",
-  user_id: 5
+  user_id: 5,
+  city_id: 1
 )
 p "Created #{Property.count} properties"
-
-
-newyork = City.create(
-  {
-    city: "New York",
-    country: "United States",
-    property_id: 1
-  }
-)
-p "Created #{City.count} cities"
