@@ -28,6 +28,8 @@ https://drive.google.com/open?id=1IPTCaeEo87YevEJzRbVJLs_Bd_J6Q_li
 
 ## Potential color combos:
 
+2 primary colors, rest neutral colors
+
 warm and trust feel - https://coolors.co/802392-995fa3-a0b9c6-a2a392-a5f8d3
 
 neutral colors - https://coolors.co/4e5340-697268-b7d1da-a2a392-e2e8dd
