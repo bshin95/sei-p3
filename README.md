@@ -22,6 +22,14 @@ Other interesting tools/functionalities I'd also like to add are a calendar to b
 
 # Wireframes
 
+## Potential color combos:
+
+warm and trust feel - https://coolors.co/802392-995fa3-a0b9c6-a2a392-a5f8d3
+
+neutral colors - https://coolors.co/4e5340-697268-b7d1da-a2a392-e2e8dd
+
+https://coolors.co/73683b-583e23-13262f-a2a392-e9e6ff
+
 ## Webpage Design:
 
 Homepage - https://xd.adobe.com/view/4fc912d5-2673-4308-753f-d8a513c6b80f-39f8/
@@ -37,6 +45,22 @@ Property listing page (seeded data) - https://xd.adobe.com/view/75fff3d2-363e-42
 User listings - https://xd.adobe.com/view/f0d17ad8-ed0a-4437-45e1-0ad800a78e63-86e0/
 
 User indivdual listing - https://xd.adobe.com/view/673abb55-bcde-43a6-7ec8-604665344def-110b/
+
+## Mobile Design
+
+Homepage - https://xd.adobe.com/view/f8c82b93-3ee5-4066-5f0c-aa48c144338e-8ef9/
+
+Signup page - https://xd.adobe.com/view/ae7f75df-e342-4f31-5184-2c728fdc3726-d84e/
+
+Login page - https://xd.adobe.com/view/acc7fdbd-bf56-4cd0-78d1-da5be4d25b95-daf6/
+
+List your home - https://xd.adobe.com/view/dbfe3524-d5ca-43e0-476a-11832d4cbf56-adcf/
+
+Property listing page (seeded data) - https://xd.adobe.com/view/e423250a-3f25-4528-58d7-a4f89c6d0a91-9212/
+
+User listings - https://xd.adobe.com/view/f196d8cb-03df-4933-5d6c-7852ca75f5dc-87a7/
+
+User indivdual listing - https://xd.adobe.com/view/6935ea7a-a405-4342-5613-f4eddd45bfd7-1f04/
 
 # Component heirarchy
 
