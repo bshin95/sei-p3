@@ -4,7 +4,7 @@
 
 # Description
 
-This is an Airbnb-based app built on Ruby on Rails integrating React as the front-end.
+This is an Airbnb-based app built on Ruby on Rails integrating React as the front-end. The objective of the app is to allow users to listing their property for rental for a duration of time. Users can be split into two categories either: hosts or temporary tenants. Tenants can explore listings on the app and book houses, apartments, condos, studios, etc by contacting the host. 
 
 # MVP Goals
 
