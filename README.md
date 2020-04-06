@@ -72,6 +72,20 @@ The Airbnb App is built on Ruby on Rails as the backend and integrates React as 
 
 ## List of server-side routes
 
+homepage - http://localhost:3000/app/home
+
+login - http://localhost:3000/app/login
+
+signup - http://localhost:3000/app/signup
+
+list your home - http://localhost:3000/app/listhome
+
+property listings - http://localhost:3000/app/listings
+
+user listing - http://localhost:3000/app/user/:user/listing/:listings
+
+user individual listing - http://localhost:3000/app/user/:user/listing/:listing/:indivudallisting
+
 # Major challenges Expected:
 
 For this app, I expect some of the harder challenges to be the user authenication where they can securely sign up and login into the app. Additionally, adding security measures such as restrict on certain pages where only users can access, modify, or delete those pages. Lastly, I feel as if I may run into minor issues with linking the properties to home owners.
