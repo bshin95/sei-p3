@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :update, :destroy]
+  before_action :authorize_request
 
   # GET /properties
   def index
@@ -10,7 +11,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   def show
-    render json: @property
+    render json: @property, include: [:user, :city]
   end
 
   # POST /properties

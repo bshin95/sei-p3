@@ -1,5 +1,6 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :update, :destroy]
+  before_action :authorize_request
 
   # GET /cities
   def index
@@ -8,6 +9,8 @@ class CitiesController < ApplicationController
     render json: @cities
   end
 
+  #/cities/1/properties/1
+  
   # GET /cities/1
   def show
     render json: @city

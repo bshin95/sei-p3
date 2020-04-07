@@ -1424,3 +1424,1218 @@ Processing by CitiesController#index as HTML
 Completed 200 OK in 22ms (Views: 13.0ms | ActiveRecord: 5.8ms | Allocations: 4465)
 
 
+Started GET "/auth/verify" for ::1 at 2020-04-06 19:40:47 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AuthenticationController
+Did you mean?  AuthenicationController):
+  
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/cities/1" for ::1 at 2020-04-06 19:41:31 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCity Load (3.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:44:in `set_city'
+Completed 200 OK in 64ms (Views: 1.8ms | ActiveRecord: 35.9ms | Allocations: 5582)
+
+
+Started GET "/properties/1" for ::1 at 2020-04-06 19:42:25 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (2.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 4.5ms | Allocations: 5155)
+
+
+Started POST "/properties" for ::1 at 2020-04-06 19:45:04 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+}
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+}'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+}
+Started POST "/properties" for ::1 at 2020-04-06 19:46:04 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+(
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+)
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '(
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+)'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+(
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+)
+Started POST "/properties" for ::1 at 2020-04-06 19:47:12 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+Property.create!(
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+)
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at 'Property.create!(
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+)'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+Property.create!(
+  address: "1001 Stone Street",
+  zipcode: "10005",
+  user_id: 1,
+  city_id: 1
+)
+Started POST "/cities" for ::1 at 2020-04-06 19:48:17 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    name: "Los Angeles",
+    state: "California",
+    country: "United States"
+  }
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+    name: "Los Angeles",
+    state: "California",
+    country: "United States"
+  }'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    name: "Los Angeles",
+    state: "California",
+    country: "United States"
+  }
+Started POST "/cities" for ::1 at 2020-04-06 19:51:01 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   name: "Los Angeles",
+   state: "California",
+   country: "United States"
+}
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+   name: "Los Angeles",
+   state: "California",
+   country: "United States"
+}'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   name: "Los Angeles",
+   state: "California",
+   country: "United States"
+}
+Started POST "/cities" for ::1 at 2020-04-06 19:52:12 -0400
+Processing by CitiesController#create as */*
+  Parameters: {"name"=>"Los Angeles", "state"=>"California", "country"=>"United States", "city"=>{"name"=>"Los Angeles", "state"=>"California", "country"=>"United States"}}
+[31mUnpermitted parameters: :name, :state[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cities_controller.rb:20:in `create'
+  [1m[36mCity Create (12.2ms)[0m  [1m[32mINSERT INTO "cities" ("country", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["country", "United States"], ["created_at", "2020-04-06 23:52:12.588327"], ["updated_at", "2020-04-06 23:52:12.588327"]]
+  ↳ app/controllers/cities_controller.rb:20:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cities_controller.rb:20:in `create'
+Completed 201 Created in 47ms (Views: 0.8ms | ActiveRecord: 38.9ms | Allocations: 5635)
+
+
+Started GET "/cities" for ::1 at 2020-04-06 20:09:59 -0400
+Processing by CitiesController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 152)
+
+
+Started GET "/auth/login" for ::1 at 2020-04-06 20:13:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+Started POST "/auth/login" for ::1 at 2020-04-06 20:13:11 -0400
+  
+ActionController::RoutingError (uninitialized constant AuthenticationController
+Did you mean?  AuthenicationController):
+  
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (90.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "airbnb_app_development"[0m
+  [1m[35m (63.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "airbnb_app_test"[0m
+  [1m[35m (252.0ms)[0m  [1m[35mCREATE DATABASE "airbnb_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (105.9ms)[0m  [1m[35mCREATE DATABASE "airbnb_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3842609281327682775)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200406155504)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "username" character varying, "email" character varying, "address" character varying, "city" character varying, "state" character varying, "country" character varying, "zipcode" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200406155504"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCities (20200406160105)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "name" character varying, "state" character varying, "country" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200406160105"]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProperties (20200406160200)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.3ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "address" character varying, "zipcode" character varying, "user_id" bigint NOT NULL, "city_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_6c249fc0b9"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+)[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_user_id" ON "properties"  ("user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_city_id" ON "properties"  ("city_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200406160200"]]
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-07 00:14:35.803406"], ["updated_at", "2020-04-07 00:14:35.803406"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3842609281327682775)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProperty Load (1.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joey99"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joeschmo99@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Joey"], ["last_name", "Schmo"], ["username", "joey99"], ["email", "joeschmo99@gmail.com"], ["address", "78th Street West 4"], ["city", "New York"], ["state", "New York"], ["country", "United States"], ["zipcode", "10005"], ["password_digest", "$2a$12$iSF52mebK79O0hJreoBVmere0kDUOsOLWveWiKY.kpRDxOF1YkhVa"], ["created_at", "2020-04-07 00:14:56.909660"], ["updated_at", "2020-04-07 00:14:56.909660"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "aprilmay54"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aprilmay54@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "April"], ["last_name", "May"], ["username", "aprilmay54"], ["email", "aprilmay54@hotmail.com"], ["address", "45 Mountain Drive"], ["city", "Kansas City"], ["state", "Missouri"], ["country", "United States"], ["zipcode", "09823"], ["password_digest", "$2a$12$m4bKYPs.DmqITlOy.cJqMO/j8Bm.K1hCLuEIXULUkD1cvaAcuAc12"], ["created_at", "2020-04-07 00:14:57.372577"], ["updated_at", "2020-04-07 00:14:57.372577"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jreyes00"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joshreyes00@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Josh"], ["last_name", "Reyes"], ["username", "jreyes00"], ["email", "joshreyes00@gmail.com"], ["address", "33 Ocean Blvd."], ["city", "Mexico City"], ["state", ""], ["country", "Mexico"], ["zipcode", "00000"], ["password_digest", "$2a$12$JzGfGCuhh19CrIZff/aT/eS2g.SRvEaGpnsVLOz6HmyFTowdaXZsy"], ["created_at", "2020-04-07 00:14:57.654661"], ["updated_at", "2020-04-07 00:14:57.654661"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "gustavejones2"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gustave2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Gustave"], ["last_name", "Jones"], ["username", "gustavejones2"], ["email", "gustave2@gmail.com"], ["address", "48 Meadow Way"], ["city", "Berlin"], ["state", ""], ["country", "Germany"], ["zipcode", "98123"], ["password_digest", "$2a$12$X4i2J4dnRCeJwCo65qnhD.QsRqkEF7uREcM904dNxpTc5U8cspB3O"], ["created_at", "2020-04-07 00:14:57.909890"], ["updated_at", "2020-04-07 00:14:57.909890"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "caity123"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "caity123@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Caitlyn"], ["last_name", "Li"], ["username", "caity123"], ["email", "caity123@gmail.com"], ["address", "11 Boulder Road"], ["city", "Tokyo"], ["state", ""], ["country", "Japan"], ["zipcode", "11111"], ["password_digest", "$2a$12$nnwDkH9Wl7QJrUqUZL/TkeYneQUk/Nmg.RffhppUCn3EGdt6JGfj6"], ["created_at", "2020-04-07 00:14:58.188401"], ["updated_at", "2020-04-07 00:14:58.188401"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "state", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "New York"], ["state", "New York"], ["country", "United States"], ["created_at", "2020-04-07 00:14:58.201340"], ["updated_at", "2020-04-07 00:14:58.201340"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cities"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (3.4ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "99 Pleasant Drive"], ["zipcode", "11111"], ["user_id", 1], ["city_id", 1], ["created_at", "2020-04-07 00:14:58.224894"], ["updated_at", "2020-04-07 00:14:58.224894"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "45 Sunset Blvd."], ["zipcode", "11111"], ["user_id", 1], ["city_id", 1], ["created_at", "2020-04-07 00:14:58.244027"], ["updated_at", "2020-04-07 00:14:58.244027"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "54 Thunder Place"], ["zipcode", "09865"], ["user_id", 2], ["city_id", 1], ["created_at", "2020-04-07 00:14:58.263604"], ["updated_at", "2020-04-07 00:14:58.263604"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.5ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "17 Scenic Road"], ["zipcode", "96432"], ["user_id", 3], ["city_id", 1], ["created_at", "2020-04-07 00:14:58.277789"], ["updated_at", "2020-04-07 00:14:58.277789"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.7ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "1076 Hilltop Drive"], ["zipcode", "98123"], ["user_id", 4], ["city_id", 1], ["created_at", "2020-04-07 00:14:58.290247"], ["updated_at", "2020-04-07 00:14:58.290247"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.4ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "7000 Greater Street"], ["zipcode", "11111"], ["user_id", 5], ["city_id", 1], ["created_at", "2020-04-07 00:14:58.305263"], ["updated_at", "2020-04-07 00:14:58.305263"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "properties"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for ::1 at 2020-04-06 20:15:51 -0400
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AuthenticationController
+Did you mean?  AuthenicationController):
+  
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+Started POST "/auth/login" for ::1 at 2020-04-06 20:17:10 -0400
+  
+ActionController::RoutingError (uninitialized constant AuthenticationController
+Did you mean?  AuthenicationController):
+  
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+Started POST "/auth/login" for ::1 at 2020-04-06 20:17:32 -0400
+  
+ActionController::RoutingError (uninitialized constant AuthenticationController
+Did you mean?  AuthenicationController):
+  
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (170.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "airbnb_app_development"[0m
+  [1m[35m (118.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "airbnb_app_test"[0m
+  [1m[35m (302.3ms)[0m  [1m[35mCREATE DATABASE "airbnb_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (148.2ms)[0m  [1m[35mCREATE DATABASE "airbnb_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (7.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (24.3ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "name" character varying, "state" character varying, "country" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "address" character varying, "zipcode" character varying, "user_id" bigint NOT NULL, "city_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_city_id" ON "properties"  ("city_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_user_id" ON "properties"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "username" character varying, "email" character varying, "address" character varying, "city" character varying, "state" character varying, "country" character varying, "zipcode" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_6c249fc0b9"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+[0m
+  [1m[35m (23.0ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200406160200)[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200406155504),
+(20200406160105);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-07 00:19:45.976814"], ["updated_at", "2020-04-07 00:19:45.976814"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "918cf56995f65f64beb96eb434f85f62ff577d74"], ["created_at", "2020-04-07 00:19:45.993658"], ["updated_at", "2020-04-07 00:19:45.993658"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "name" character varying, "state" character varying, "country" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "address" character varying, "zipcode" character varying, "user_id" bigint NOT NULL, "city_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_city_id" ON "properties"  ("city_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_user_id" ON "properties"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "username" character varying, "email" character varying, "address" character varying, "city" character varying, "state" character varying, "country" character varying, "zipcode" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_6c249fc0b9"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200406160200)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200406155504),
+(20200406160105);
+
+[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-07 00:19:46.216530"], ["updated_at", "2020-04-07 00:19:46.216530"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-04-07 00:19:46.225805"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "918cf56995f65f64beb96eb434f85f62ff577d74"], ["created_at", "2020-04-07 00:19:46.232129"], ["updated_at", "2020-04-07 00:19:46.232129"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joey99"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joeschmo99@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (740.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Joey"], ["last_name", "Schmo"], ["username", "joey99"], ["email", "joeschmo99@gmail.com"], ["address", "78th Street West 4"], ["city", "New York"], ["state", "New York"], ["country", "United States"], ["zipcode", "10005"], ["password_digest", "$2a$12$1CDP1e4LDcRyzH9eFUaxy.OoiQQYCAd9OYnTsTrVQnQMIPM2c3BV6"], ["created_at", "2020-04-07 00:19:46.621667"], ["updated_at", "2020-04-07 00:19:46.621667"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "aprilmay54"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aprilmay54@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "April"], ["last_name", "May"], ["username", "aprilmay54"], ["email", "aprilmay54@hotmail.com"], ["address", "45 Mountain Drive"], ["city", "Kansas City"], ["state", "Missouri"], ["country", "United States"], ["zipcode", "09823"], ["password_digest", "$2a$12$qAPYKkbVbqb.2FiwS8QL4eUupgi67BVAA4LUXnKB6Tvf8u63j5pjC"], ["created_at", "2020-04-07 00:19:47.632460"], ["updated_at", "2020-04-07 00:19:47.632460"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jreyes00"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joshreyes00@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Josh"], ["last_name", "Reyes"], ["username", "jreyes00"], ["email", "joshreyes00@gmail.com"], ["address", "33 Ocean Blvd."], ["city", "Mexico City"], ["state", ""], ["country", "Mexico"], ["zipcode", "00000"], ["password_digest", "$2a$12$PSHNQ28fOsOtYvqamXOH2uCISuNlZ4E6cc3C2CZgiDkTMEqCkfHda"], ["created_at", "2020-04-07 00:19:47.903423"], ["updated_at", "2020-04-07 00:19:47.903423"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "gustavejones2"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gustave2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Gustave"], ["last_name", "Jones"], ["username", "gustavejones2"], ["email", "gustave2@gmail.com"], ["address", "48 Meadow Way"], ["city", "Berlin"], ["state", ""], ["country", "Germany"], ["zipcode", "98123"], ["password_digest", "$2a$12$azc9FcqDihO7dae2vrT1C.90EEJg2OsUYPGAoOSwvd7aKAwQUpnsu"], ["created_at", "2020-04-07 00:19:48.184985"], ["updated_at", "2020-04-07 00:19:48.184985"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "caity123"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "caity123@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "address", "city", "state", "country", "zipcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Caitlyn"], ["last_name", "Li"], ["username", "caity123"], ["email", "caity123@gmail.com"], ["address", "11 Boulder Road"], ["city", "Tokyo"], ["state", ""], ["country", "Japan"], ["zipcode", "11111"], ["password_digest", "$2a$12$CYmksziQNrnQxv8UC8vJnOY0LKfQ8O2yxb1BTapnmXneFTIRedBVG"], ["created_at", "2020-04-07 00:19:48.488795"], ["updated_at", "2020-04-07 00:19:48.488795"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.4ms)[0m  [1m[32mINSERT INTO "cities" ("name", "state", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "New York"], ["state", "New York"], ["country", "United States"], ["created_at", "2020-04-07 00:19:48.508580"], ["updated_at", "2020-04-07 00:19:48.508580"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cities"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCity Load (13.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.7ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "99 Pleasant Drive"], ["zipcode", "11111"], ["user_id", 1], ["city_id", 1], ["created_at", "2020-04-07 00:19:48.575155"], ["updated_at", "2020-04-07 00:19:48.575155"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.6ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "45 Sunset Blvd."], ["zipcode", "11111"], ["user_id", 1], ["city_id", 1], ["created_at", "2020-04-07 00:19:48.586891"], ["updated_at", "2020-04-07 00:19:48.586891"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.5ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "54 Thunder Place"], ["zipcode", "09865"], ["user_id", 2], ["city_id", 1], ["created_at", "2020-04-07 00:19:48.616659"], ["updated_at", "2020-04-07 00:19:48.616659"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "17 Scenic Road"], ["zipcode", "96432"], ["user_id", 3], ["city_id", 1], ["created_at", "2020-04-07 00:19:48.626239"], ["updated_at", "2020-04-07 00:19:48.626239"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.5ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "1076 Hilltop Drive"], ["zipcode", "98123"], ["user_id", 4], ["city_id", 1], ["created_at", "2020-04-07 00:19:48.638903"], ["updated_at", "2020-04-07 00:19:48.638903"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "zipcode", "user_id", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["address", "7000 Greater Street"], ["zipcode", "11111"], ["user_id", 5], ["city_id", 1], ["created_at", "2020-04-07 00:19:48.646830"], ["updated_at", "2020-04-07 00:19:48.646830"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "properties"[0m
+Started POST "/auth/login" for ::1 at 2020-04-06 20:20:10 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AuthenticationController
+Did you mean?  AuthenicationController):
+  
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.2) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+Started POST "/auth/login" for ::1 at 2020-04-06 20:21:43 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+	"username": "joey99"
+	"password": "123456"
+}'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "joey99"
+	"password": "123456"
+}
+Started POST "/auth/login" for ::1 at 2020-04-06 20:22:16 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"username"=>"joey99", "password"=>"[FILTERED]", "authentication"=>{"username"=>"joey99", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (21.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joey99"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 1336ms (Views: 6.3ms | ActiveRecord: 73.5ms | Allocations: 11068)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-06 20:24:30 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"username"=>"joey99", "password"=>"[FILTERED]", "authentication"=>{"username"=>"joey99", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joey99"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 1339ms (Views: 2.1ms | ActiveRecord: 14.0ms | Allocations: 8613)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-06 20:25:21 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"username"=>"joey99", "password"=>"[FILTERED]", "authentication"=>{"username"=>"joey99", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joey99"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 556ms (Views: 0.9ms | ActiveRecord: 1.3ms | Allocations: 974)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-06 20:26:26 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"username"=>"joey99", "password"=>"[FILTERED]", "authentication"=>{"username"=>"joey99", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joey99"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 2749ms (Views: 8.0ms | ActiveRecord: 3.0ms | Allocations: 977)
+
+
+Started GET "/cities" for ::1 at 2020-04-06 20:27:17 -0400
+Processing by CitiesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `authorize_request'
+  [1m[36mCity Load (3.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/cities_controller.rb:9:in `index'
+Completed 200 OK in 77ms (Views: 33.2ms | ActiveRecord: 13.4ms | Allocations: 5212)
+
+
+Started GET "/properties/1" for ::1 at 2020-04-06 20:32:10 -0400
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (3.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:45:in `set_property'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `authorize_request'
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 18.3ms | Allocations: 16182)
+
+
+  
+NoMethodError (undefined method `users' for #<Property:0x00007ffcdf2f1168>
+Did you mean?  user
+               user=):
+  
+app/controllers/properties_controller.rb:14:in `show'
+Started GET "/properties/1" for ::1 at 2020-04-06 20:32:57 -0400
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:45:in `set_property'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `authorize_request'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:14:in `show'
+Completed 500 Internal Server Error in 499ms (ActiveRecord: 77.2ms | Allocations: 17828)
+
+
+  
+NoMethodError (undefined method `cities' for #<Property:0x00007ffcdecd7b38>):
+  
+app/controllers/properties_controller.rb:14:in `show'
+Started GET "/properties/1" for ::1 at 2020-04-06 20:33:09 -0400
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:45:in `set_property'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `authorize_request'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:14:in `show'
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:14:in `show'
+Completed 200 OK in 318ms (Views: 78.5ms | ActiveRecord: 26.3ms | Allocations: 18716)
+
+
