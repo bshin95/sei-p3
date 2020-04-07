@@ -10,7 +10,6 @@ class CitiesController < ApplicationController
   end
 
   #/cities/1/properties/1
-  
   # GET /cities/1
   def show
     render json: @city
