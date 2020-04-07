@@ -20,7 +20,7 @@ User.create!(
   state: "New York",
   country: "United States",
   zipcode: "10005",
-  password_digest: "123456"
+  password: "123456"
 )
 
 User.create!(
@@ -33,7 +33,7 @@ User.create!(
   state: "Missouri",
   country: "United States",
   zipcode: "09823",
-  password_digest: "123456"
+  password: "123456"
 )
 
 User.create!(
@@ -46,7 +46,7 @@ User.create!(
   state: "",
   country: "Mexico",
   zipcode: "00000",
-  password_digest: "123456"
+  password: "123456"
 )
 
 User.create!(
@@ -59,7 +59,7 @@ User.create!(
   state: "",
   country: "Germany",
   zipcode: "98123",
-  password_digest: "123456"
+  password: "123456"
 )
 
 User.create!(
@@ -72,7 +72,7 @@ User.create!(
   state: "",
   country: "Japan",
   zipcode: "11111",
-  password_digest: "123456"
+  password: "123456"
 )
 p "Created #{User.count} users"
 
