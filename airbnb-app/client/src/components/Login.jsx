@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Login = (props) => {
   return (
     <div className="auth-container">
-      <h2>login</h2>
+      <h2>Login</h2>
       <hr />
       <form
         onSubmit={(e) => {
@@ -27,8 +27,10 @@ const Login = (props) => {
           onChange={props.handleChange}
         />
         <hr />
-        <button>Login</button>
-        <Link to="/register">Register</Link>
+        <div className="login-page-bot-buttons">
+          <button className="login-page-button">Login</button>
+          <Link className="login-register-button" to="/register">Register</Link>
+        </div>
       </form>
     </div>
   )

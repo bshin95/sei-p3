@@ -3,13 +3,21 @@ import { Route, Link } from "react-router-dom"
 import { withRouter } from "react-router"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import ShowProperties from "./components/ShowProperties"
+import ListProperties from "./components/ListProperty"
+import StartHosting from "./components/StartHosting"
+import HostingConfirmation from "./components/HostingConfirmation"
 import "./App.css"
+import Header from "./components/Header"
 
 import {
   loginUser,
   registerUser,
   removeToken,
   verifyUser,
+  listProperties,
+  listPropertyItem,
+  postProperty,
 } from "./services/api-helper"
 
 class App extends Component {
@@ -18,6 +26,7 @@ class App extends Component {
 
     this.state = {
       currentUser: null,
+      property: [],
 
       authFormData: {
         email: "",
@@ -73,26 +82,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>
-          <h1>Airbnb App</h1>
-          {this.state.currentUser ? (
-            <div>
-              {/* This is a greeting to the user if there user info has been set in state.
-              We use the guard operator to check '&&' */}
-              <h3>
-                Hi {this.state.currentUser && this.state.currentUser.email}
-                <button onClick={this.handleLogout}>logout</button>
-              </h3>
-            </div>
-          ) : (
-            <button onClick={this.handleLoginButton}>Login/register</button>
-          )}
-        </header>
+        <Header
+          handleLoginButton={this.handleLoginButton}
+          handleLogout={this.handleLogout}
+          currentUser={this.state.currentUser}
+        />
         <Route
           exact
           path="/login"
           render={(props) => (
             <Login
+              {...props}
               handleLogin={this.handleLogin}
               handleChange={this.authHandleChange}
               formData={this.state.authFormData}
@@ -104,11 +104,20 @@ class App extends Component {
           path="/register"
           render={(props) => (
             <Register
+              {...props}
               handleRegister={this.handleRegister}
               handleChange={this.authHandleChange}
               formData={this.state.authFormData}
             />
           )}
+        />
+        <Route exact path="/properties" component={ShowProperties} />
+        <Route exact path="/properties/host" component={ListProperties} />
+        <Route exact path="/properties/host/start" component={StartHosting} />
+        <Route
+          exact
+          path="/hosting-confirmation"
+          component={HostingConfirmation}
         />
       </div>
     )
