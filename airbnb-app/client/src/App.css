@@ -1,38 +1,353 @@
-.App {
+html,
+body,
+section {
+  height: 100%;
+}
+
+body {
+  color: black;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ############# HEADER CSS #############*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.left-header {
+  display: flex;
+  margin: auto;
+  text-align: left;
+  background-color: #fff;
+  flex: 1;
+  padding: 1rem;
+  width: auto;
+  align-items: center; /* align vertical */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.airbnb-logo {
+  display: table-cell;
+  line-height: 0;
+  width: 5%;
+  height: 50%;
+  padding-right: 0.6em;
+}
+
+.airbnb-header {
+  font-size: 1.75em;
+}
+
+.airbnb-home-link,
+.airbnb-home-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.right-header {
+  display: block;
+  margin: auto;
+  text-align: right;
+  background-color: #fff;
+  flex: 1;
+  padding: 1rem;
+  width: auto;
+  font-size: 0.5em;
+}
+
+.header-buttons {
+  font-size: 2em;
+}
+
+.explore-buttons {
+  display: inline;
+  padding-right: 1em;
+  font-size: 2em;
+}
+
+.look-homes-button {
+  padding: 0;
+  border: none;
+  background: none;
+  padding-right: 1em;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.host-homes-button {
+  padding: 0;
+  border: none;
+  background: none;
+  padding-right: 1em;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.logout-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.login-register-button {
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.login-page-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+/* ############# LOGIN PAGE CSS #############*/
+
+.login-page-bot-buttons {
+  font-size: 1em;
+  padding: auto;
+  padding-right: 0.25em;
+  color: inherit;
+}
+
+.login-register-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  padding-left: 0.25em;
+  color: inherit;
+}
+
+/* ############# REGISTER PAGE CSS #############*/
+
+.register-button {
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  padding-left: 0.25em;
+  color: inherit;
+}
+
+/* ############# PROPERTIES PAGE CSS #############*/
+
+.city-listings-row-one {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.new-york {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+}
+
+.los-angeles {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.chicago {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.miami {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.city-listings-row-two {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.paris {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.londo {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.tokyo {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.seoul {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+/* ############# PROPERTIES/HOST PAGE CSS #############*/
+
+.host-top-container {
+  background-color: #f8f8f8;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.why-host-container {
+  display: flex;
+  padding: 2em 10em;
+  text-align: left;
+}
+
+.host-airbnb {
+  padding-right: 1em;
+}
+
+.have-your-back {
+  padding-left: 1em;
+}
+
+.steps-container {
+  display: flex;
+  padding: 2em 10em;
+  text-align: left;
+}
+
+.get-started-button {
+  border-radius: 7.5px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #db3842;
+  color: #ffffff;
+  padding: 1em 2em;
+  font-size: 0.75em;
+}
+
+.start-hosting-header {
+  font-size: 1.5em;
+}
+
+.home-interior-image {
+  width: 60%;
+  height: 25%;
+}
+
+.img-div {
+  background: linear-gradient(
+    to bottom,
+    #f8f8f8 0%,
+    #f8f8f8 25%,
+    #f8f8f8 25%,
+    #ffffff 25%,
+    #ffffff 100%
+  ); /* W3C */
+
+  width: 100%;
+  height: 100%;
+}
+.hosting-description {
+  padding-top: 1em;
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.host-steps {
+  flex: 1 1 0px;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.checkmark {
+  width: 20%;
+  padding-bottom: 0;
+}
+
+.link-start {
+  text-decoration: none;
+  color: #008489;
+}
+
+hr {
+  text-align: center;
+  width: 10%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+.insurance-container {
+  display: flex;
+  padding: 2em 10em;
+  text-align: left;
+}
+
+#checkmark {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: #018489;
+  border-radius: 50%;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+#checkmark:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 9px;
+  background-color: #fff;
+  left: 11px;
+  top: 6px;
+}
+
+#checkmark:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #fff;
+  left: 8px;
+  top: 12px;
+}
+
+.step-check {
+  padding-bottom: 1em;
 }

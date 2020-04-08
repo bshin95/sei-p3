@@ -3,7 +3,7 @@ import React from "react"
 const Register = (props) => {
   return (
     <div className="auth-container">
-      <h2>Register</h2>
+      <h2>Sign Up</h2>
       <hr />
       <form onSubmit={props.handleRegister}>
         <p>First Name:</p>
@@ -78,7 +78,7 @@ const Register = (props) => {
         />
         <hr />
         <p></p>
-        <button>Register</button>
+        <button className="register-button">Register</button>
       </form>
     </div>
   )
