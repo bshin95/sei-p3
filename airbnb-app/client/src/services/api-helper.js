@@ -40,6 +40,8 @@ export const removeToken = () => {
   localStorage.clear()
 }
 
+export const getUser = () => api.get(`/users/current-user`)
+
 // ############################################
 // ################ PROPERTIES ################
 // ############################################
@@ -54,7 +56,12 @@ export const listPropertyItem = async (id) => {
   return resp.data
 }
 
+export const destroyProperty = (id) => api.delete(`/properties/${id}`)
+
 export const postProperty = (item) => api.post(`/properties`, item)
+
+export const updateProperty = (item) =>
+  api.patch(`/properties/${item.id}`, item)
 
 // ############################################
 // ################ CITIES ################

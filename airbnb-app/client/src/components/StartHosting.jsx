@@ -39,34 +39,73 @@ class StartHosting extends Component {
     const { cities, address, zipcode, city } = this.state
     return (
       <div>
-        <div>
+        <img
+          className="living-room"
+          src="https://blindepot.com/wp-content/uploads/horizontal-blinds-living2-1795x933-1030x535.jpg"
+        ></img>
+        <div className="how-to-container">
           <h1>How to start hosting</h1>
+          <div>
+            <p>
+              Listing your home is simple. Fill out the form and you're good to
+              go. We will review the application and get back to you. All we
+              require is your address, zipcode, and the city location.
+            </p>
+          </div>
         </div>
         <div>
-          <h2>Start hosting</h2>
-          <form onSubmit={this.addProperty}>
-            <input
-              id="address"
-              placeholder="Enter address"
-              value={address}
-              onChange={this.handleInputChange}
-            />
-            <input
-              id="zipcode"
-              placeholder="Enter a zipcode"
-              value={zipcode}
-              onChange={this.handleInputChange}
-            />
-            <select id="city" onChange={this.handleInputChange} value={city}>
-              <option value="">Select a City</option>
-              {cities.map((c, i) => (
-                <option key={i} value={c.id}>
-                  {c.name}
-                </option>
-              ))}
-            </select>
-            <button>Submit</button>
-          </form>
+          <hr />
+          <h1>Payments made simple</h1>
+          <div className="steps-container">
+            <div className="host-steps">
+              <h3>Charge what you want</h3>
+              <p>
+                You always get to pick your price. Need help? We have tools to
+                help you match demand in your area.
+              </p>
+            </div>
+            <div className="host-steps">
+              <h3>Pay low fees</h3>
+              <p>
+                You always get to pick your price. Need help? We have tools to
+                help you match demand in your area.
+              </p>
+            </div>
+            <div className="host-steps">
+              <h3>Get paid quickly</h3>
+              <p>
+                Once a guest checks in, we can send your money by Paypal, direct
+                deposit, or other available methods.
+              </p>
+            </div>
+          </div>
+          <hr />
+          <h1>List your home</h1>
+          <div className="form-container">
+            <form className="form-fillout" onSubmit={this.addProperty}>
+              <input
+                id="address"
+                placeholder="Enter address"
+                value={address}
+                onChange={this.handleInputChange}
+              />
+              <input
+                id="zipcode"
+                placeholder="Enter a zipcode"
+                value={zipcode}
+                onChange={this.handleInputChange}
+              />
+              <select id="city" onChange={this.handleInputChange} value={city}>
+                <option value="">Select a City</option>
+                {cities.map((c, i) => (
+                  <option key={i} value={c.id}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
+              <button>Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     )

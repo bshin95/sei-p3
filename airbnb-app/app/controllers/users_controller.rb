@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     render json: @user, include: :properties
   end
 
+  def current_user
+    render json: @current_user, include: :properties
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)

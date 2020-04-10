@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Route, Link } from "react-router-dom"
+import { Route } from "react-router-dom"
 import { withRouter } from "react-router"
 import Login from "./components/Login"
 import Register from "./components/Register"
@@ -7,6 +7,7 @@ import ShowProperties from "./components/ShowProperties"
 import ListProperties from "./components/ListProperty"
 import StartHosting from "./components/StartHosting"
 import HostingConfirmation from "./components/HostingConfirmation"
+import UserListings from "./components/UserListings"
 import "./App.css"
 import Header from "./components/Header"
 
@@ -119,6 +120,7 @@ class App extends Component {
           path="/hosting-confirmation"
           component={HostingConfirmation}
         />
+        <Route exact path="/users/:id" component={UserListings} />
       </div>
     )
   }

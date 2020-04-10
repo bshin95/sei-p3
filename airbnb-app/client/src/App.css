@@ -19,6 +19,7 @@ header {
   padding-left: 3em;
   padding-right: 3em;
   font-size: 0.5em;
+  border-bottom: 1px solid #f8f8f8;
 }
 
 .left-header {
@@ -350,4 +351,24 @@ hr {
 
 .step-check {
   padding-bottom: 1em;
+}
+
+/* ############# HOST/START PAGE CSS #############*/
+
+.living-room {
+  width: 75%;
+  height: 50%;
+}
+
+.how-to-container {
+  padding: 2em 10em;
+}
+
+/* .form-container {
+  display: flex;
+} */
+
+.form-fillout {
+  flex-direction: column;
+  justify-content: center;
 }
