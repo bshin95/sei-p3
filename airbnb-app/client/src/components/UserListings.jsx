@@ -7,6 +7,10 @@ import {
   updateProperty,
 } from "../services/api-helper"
 
+// React modal code taken from:
+// https://github.com/reactjs/react-modal
+// https://codepen.io/claydiffrient/pen/KNxgav
+
 class UserListings extends Component {
   constructor(props) {
     super(props)
@@ -33,11 +37,10 @@ class UserListings extends Component {
       const { currentUser } = this.state
       const { data } = await destroyProperty(id)
       const propertiesCopy = [...currentUser.properties].filter(
-        (p) => p.id !== id
+        (property) => property.id !== id
       )
       currentUser.properties = propertiesCopy
       this.setState({ currentUser })
-      console.log("deleted property", data)
     } catch (err) {
       console.log("Error deleting your property", err)
     }
@@ -63,7 +66,7 @@ class UserListings extends Component {
       const { data } = await updateProperty(propertyToEdit)
       const propertiesCopy = [...currentUser.properties]
       const propertyIndex = propertiesCopy.findIndex(
-        (p) => p.id === propertyToEdit.id
+        (property) => property.id === propertyToEdit.id
       )
       propertiesCopy.splice(propertyIndex, 1, data)
       currentUser.properties = propertiesCopy
@@ -112,7 +115,7 @@ class UserListings extends Component {
           style={customStyles}
         >
           <h2>Edit Property</h2>
-          <button onClick={this.toggleModal}>close</button>
+          <button onClick={this.toggleModal}>Close</button>
           <form onSubmit={this.updateProperty}>
             Address:{" "}
             <div>

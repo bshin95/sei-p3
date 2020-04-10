@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import TextContainer from "./TextContainer"
 import { postProperty, listCities } from "../services/api-helper"
 
 class StartHosting extends Component {
@@ -42,6 +43,7 @@ class StartHosting extends Component {
         <img
           className="living-room"
           src="https://blindepot.com/wp-content/uploads/horizontal-blinds-living2-1795x933-1030x535.jpg"
+          alt="living room"
         ></img>
         <div className="how-to-container">
           <h1>How to start hosting</h1>
@@ -57,27 +59,21 @@ class StartHosting extends Component {
           <hr />
           <h1>Payments made simple</h1>
           <div className="steps-container">
-            <div className="host-steps">
-              <h3>Charge what you want</h3>
-              <p>
-                You always get to pick your price. Need help? We have tools to
-                help you match demand in your area.
-              </p>
-            </div>
-            <div className="host-steps">
-              <h3>Pay low fees</h3>
-              <p>
-                You always get to pick your price. Need help? We have tools to
-                help you match demand in your area.
-              </p>
-            </div>
-            <div className="host-steps">
-              <h3>Get paid quickly</h3>
-              <p>
-                Once a guest checks in, we can send your money by Paypal, direct
-                deposit, or other available methods.
-              </p>
-            </div>
+            <TextContainer
+              header="Charge what you want"
+              body="You always get to pick your price. Need help? We have tools to
+              help you match demand in your area."
+            />
+            <TextContainer
+              header="Pay low fees"
+              body="You always get to pick your price. Need help? We have tools to
+              help you match demand in your area."
+            />
+            <TextContainer
+              header="Get paid quickly"
+              body="Once a guest checks in, we can send your money by Paypal, direct
+              deposit, or other available methods."
+            />
           </div>
           <hr />
           <h1>List your home</h1>
@@ -113,69 +109,3 @@ class StartHosting extends Component {
 }
 
 export default StartHosting
-
-// class StartHosting extends Component {
-//   constructor(props) {
-//     super(props)
-
-//     this.state = {
-//       properties: [],
-//     }
-
-//     this.handleFormSubmit = this.handleFormSubmit.bind(this)
-//   }
-
-//   handleFormSubmit(address, zipcode) {
-//     console.log(address, zipcode)
-//   }
-
-//   fetch("http://localhost:3000/properties/host/start") {
-
-//   }
-
-//   componentDidMount() {
-//     fetch("/properties/host/start")
-//       .then((response) => {
-//         return response.json()
-//       })
-//       .then((data) => {
-//         this.setState({ properties: data })
-//       })
-//   }
-
-//   render() {
-//     let formFields = {}
-//     return (
-//       <div>
-//         <div>
-//           <h1>How to start hosting</h1>
-//         </div>
-//         <div>
-//           <h2>Start hosting</h2>
-//           <form
-//             onSubmit={(e) => {
-//               props.handleFormSubmit(
-//                 formFields.address.value,
-//                 formFields.zipcode.value
-//               )
-//               e.target.reset()
-//             }}
-//           >
-//             <input
-//               ref={(input) => (formFields.address = input)}
-//               placeholder="Enter address"
-//             />
-//             <input
-//               ref={(input) => (formFields.zipcode = input)}
-//               placeholder="Enter a zipcode"
-//             />
-//             <button>Submit</button>
-//           </form>
-//           <button>Submit your housing</button>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
-
-// export default StartHosting

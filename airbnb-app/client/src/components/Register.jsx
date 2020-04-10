@@ -77,7 +77,6 @@ const Register = (props) => {
           onChange={props.handleChange}
         />
         <hr />
-        <p></p>
         <button className="register-button">Register</button>
       </form>
     </div>

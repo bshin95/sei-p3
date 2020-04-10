@@ -12,6 +12,32 @@ body {
   text-align: center;
 }
 
+/* ############# Homepage CSS #############*/
+
+.home-page-header {
+  padding-top: 0.5em;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.home-page-image {
+  width: 85%;
+}
+
+.split-container {
+  display: flex;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-text {
+  flex: 2;
+}
+
 /* ############# HEADER CSS #############*/
 
 header {
@@ -43,6 +69,7 @@ header {
 
 .airbnb-header {
   font-size: 1.75em;
+  color: #db3842;
 }
 
 .airbnb-home-link,
@@ -72,29 +99,13 @@ header {
   font-size: 2em;
 }
 
-.look-homes-button {
+.header-buttons {
+  text-decoration: none;
   padding: 0;
   border: none;
   background: none;
   padding-right: 1em;
-  font-size: 0.75em;
-  color: inherit;
-}
-
-.host-homes-button {
-  padding: 0;
-  border: none;
-  background: none;
-  padding-right: 1em;
-  font-size: 0.75em;
-  color: inherit;
-}
-
-.logout-button {
-  padding: 0;
-  border: none;
-  background: none;
-  font-size: 0.75em;
+  font-size: 1.25em;
   color: inherit;
 }
 
@@ -108,6 +119,7 @@ header {
 }
 
 .login-page-button {
+  text-decoration: none;
   padding: 0;
   border: none;
   background: none;
@@ -371,4 +383,14 @@ hr {
 .form-fillout {
   flex-direction: column;
   justify-content: center;
+}
+
+/* ############# FOOTER CSS #############*/
+
+.footer {
+  border-top: 1px solid #f8f8f8;
+}
+
+.rights-reversed {
+  font-size: 0.75em;
 }

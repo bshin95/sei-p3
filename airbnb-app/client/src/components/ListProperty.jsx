@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import TextContainer from "./TextContainer"
 
 class ListProperty extends Component {
   constructor(props) {
@@ -36,69 +37,44 @@ class ListProperty extends Component {
           />
         </div>
         <div className="why-host-container">
-          <div className="host-airbnb">
-            <h3>Why host on Airbnb?</h3>
-            <p>
-              No matter what kind of home or room you have to share, Airbnb
-              makes it simple and secure to host travelers. You’re in full
-              control of your availability, prices, house rules, and how you
-              interact with guests.
-            </p>
-          </div>
-          <div className="have-your-back">
-            <h3>We have your back</h3>
-            <p>
-              To keep you, your home, and your belongings safe, we cover every
-              booking with $1M USD in property damage protection and another $1M
-              USD in insurance against accidents.
-            </p>
-          </div>
+          <TextContainer
+            header="Why host on Airbnb?"
+            body="No matter what kind of home or room you have to share, Airbnb
+            makes it simple and secure to host travelers. You’re in full
+            control of your availability, prices, house rules, and how you
+            interact with guests."
+          />
+          <TextContainer
+            header="We have your back"
+            body="To keep you, your home, and your belongings safe, we cover every
+            booking with $1M USD in property damage protection and another $1M
+            USD in insurance against accidents."
+          />
         </div>
         <div className="host-steps-container">
           <hr />
           <h1>Hosting in 3 steps</h1>
           <div className="steps-container">
-            <div className="host-steps">
-              <img
-                className="checkmark"
-                src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-circle-outline.png"
-                alt="checkmark"
-              ></img>
-              <h3>List your space for free</h3>
-              <p>
-                Share any space without sign-up charges, from a shared living
-                room to a second home and everything in-between.
-              </p>
-            </div>
-            <div className="host-steps">
-              <img
-                className="checkmark"
-                src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-circle-outline.png"
-                alt="checkmark"
-              ></img>
-              <h3>Decide how you want to host</h3>
-              <p>
-                Choose your own schedule, prices, and requirements for guests.
-                We’re there to help along the way.
-              </p>
-            </div>
-            <div className="host-steps">
-              <img
-                className="checkmark"
-                src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-circle-outline.png"
-                alt="checkmark"
-              ></img>
-              <h3>Welcome your first guest</h3>
-              <p>
-                Once your listing is live, qualified guests can reach out. You
-                can message them with any questions before their stay. <br />
-                <br />
-                <Link to="/properties/host/start" className="link-start">
-                  {" "}
-                  Start hosting today.
-                </Link>
-              </p>
-            </div>
+            <TextContainer
+              checkmark
+              header="List your space for free"
+              body="Share any space without sign-up charges, from a shared living
+              room to a second home and everything in-between."
+            />
+            <TextContainer
+              checkmark
+              header="Decide how you want to host"
+              body="Choose your own schedule, prices, and requirements for guests.
+              We’re there to help along the way."
+            />
+            <TextContainer
+              checkmark
+              header="Welcome your first guest"
+              body="Once your listing is live, qualified guests can reach out. You
+              can message them with any questions before their stay."
+              linkTo="/properties/host/start"
+              linkText="Start hosting today."
+            />
           </div>
         </div>
         <div>

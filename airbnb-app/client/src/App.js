@@ -8,17 +8,16 @@ import ListProperties from "./components/ListProperty"
 import StartHosting from "./components/StartHosting"
 import HostingConfirmation from "./components/HostingConfirmation"
 import UserListings from "./components/UserListings"
+import HomePage from "./components/HomePage"
 import "./App.css"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 import {
   loginUser,
   registerUser,
   removeToken,
   verifyUser,
-  listProperties,
-  listPropertyItem,
-  postProperty,
 } from "./services/api-helper"
 
 class App extends Component {
@@ -88,6 +87,7 @@ class App extends Component {
           handleLogout={this.handleLogout}
           currentUser={this.state.currentUser}
         />
+        <Route exact path="/" component={HomePage} />
         <Route
           exact
           path="/login"
@@ -121,6 +121,7 @@ class App extends Component {
           component={HostingConfirmation}
         />
         <Route exact path="/users/:id" component={UserListings} />
+        <Footer />
       </div>
     )
   }
