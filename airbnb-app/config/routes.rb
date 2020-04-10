@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   get '/properties/host', to: 'properties#host', as: :host
   get '/properties/host/start', to: 'properties#start', as: :start
 
+  get '/users/current-user', to: 'users#current_user', as: :current_user
+
   resources :users
+  
+  # get '/users/:id/properties/:id', to: 'users#properties', as: :listings
 end

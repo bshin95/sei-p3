@@ -1,8 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-// import { hostingimage } from "/Users/bryanshin/GA/Sei-Mandalorians-Student/projects/p4/airbnb-app/client/src/images/hostingimage.jpg"
-
-// import Axios from "axios"
 
 class ListProperty extends Component {
   constructor(props) {

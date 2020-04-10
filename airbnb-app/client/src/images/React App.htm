@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:3001/properties/host/start -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3001/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3001/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3001/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+</style><style type="text/css">html,
+body,
+section {
+  height: 100%;
+}
+
+body {
+  color: black;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+}
+
+/* ############# HEADER CSS #############*/
+
+header {
+  display: flex;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 0.5em;
+}
+
+.left-header {
+  display: flex;
+  margin: auto;
+  text-align: left;
+  background-color: #fff;
+  flex: 1 1;
+  padding: 1rem;
+  width: auto;
+  align-items: center; /* align vertical */
+}
+
+.airbnb-logo {
+  display: table-cell;
+  line-height: 0;
+  width: 5%;
+  height: 50%;
+  padding-right: 0.6em;
+}
+
+.airbnb-header {
+  font-size: 1.75em;
+}
+
+.airbnb-home-link,
+.airbnb-home-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.right-header {
+  display: block;
+  margin: auto;
+  text-align: right;
+  background-color: #fff;
+  flex: 1 1;
+  padding: 1rem;
+  width: auto;
+  font-size: 0.5em;
+}
+
+.header-buttons {
+  font-size: 2em;
+}
+
+.explore-buttons {
+  display: inline;
+  padding-right: 1em;
+  font-size: 2em;
+}
+
+.look-homes-button {
+  padding: 0;
+  border: none;
+  background: none;
+  padding-right: 1em;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.host-homes-button {
+  padding: 0;
+  border: none;
+  background: none;
+  padding-right: 1em;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.logout-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.login-register-button {
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+.login-page-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  color: inherit;
+}
+
+/* ############# LOGIN PAGE CSS #############*/
+
+.login-page-bot-buttons {
+  font-size: 1em;
+  padding: auto;
+  padding-right: 0.25em;
+  color: inherit;
+}
+
+.login-register-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  padding-left: 0.25em;
+  color: inherit;
+}
+
+/* ############# REGISTER PAGE CSS #############*/
+
+.register-button {
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.75em;
+  padding-left: 0.25em;
+  color: inherit;
+}
+
+/* ############# PROPERTIES PAGE CSS #############*/
+
+.city-listings-row-one {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.new-york {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+}
+
+.los-angeles {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.chicago {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.miami {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.city-listings-row-two {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.paris {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.londo {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.tokyo {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.seoul {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+/* ############# PROPERTIES/HOST PAGE CSS #############*/
+
+.host-top-container {
+  background-color: #f8f8f8;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.why-host-container {
+  display: flex;
+  padding: 2em 10em;
+  text-align: left;
+}
+
+.host-airbnb {
+  padding-right: 1em;
+}
+
+.have-your-back {
+  padding-left: 1em;
+}
+
+.steps-container {
+  display: flex;
+  padding: 2em 10em;
+  text-align: left;
+}
+
+.get-started-button {
+  border-radius: 7.5px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #db3842;
+  color: #ffffff;
+  padding: 1em 2em;
+  font-size: 0.75em;
+}
+
+.start-hosting-header {
+  font-size: 1.5em;
+}
+
+.home-interior-image {
+  width: 60%;
+  height: 25%;
+}
+
+.img-div {
+  background: linear-gradient(
+    to bottom,
+    #f8f8f8 0%,
+    #f8f8f8 25%,
+    #f8f8f8 25%,
+    #ffffff 25%,
+    #ffffff 100%
+  ); /* W3C */
+
+  width: 100%;
+  height: 100%;
+}
+.hosting-description {
+  padding-top: 1em;
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.host-steps {
+  flex: 1 1;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.checkmark {
+  width: 20%;
+  padding-bottom: 0;
+}
+
+.link-start {
+  text-decoration: none;
+  color: #008489;
+}
+
+hr {
+  text-align: center;
+  width: 10%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+.insurance-container {
+  display: flex;
+  padding: 2em 10em;
+  text-align: left;
+}
+
+#checkmark {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: #018489;
+  border-radius: 50%; /* IE 9 */ /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+#checkmark:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 9px;
+  background-color: #fff;
+  left: 11px;
+  top: 6px;
+}
+
+#checkmark:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #fff;
+  left: 8px;
+  top: 12px;
+}
+
+.step-check {
+  padding-bottom: 1em;
+}
+
+/* ############# HOST/START PAGE CSS #############*/
+
+.living-room {
+  width: 75%;
+  height: 50%;
+}
+
+.how-to-container {
+  padding: 2em 10em;
+}
+
+.form-container {
+  display: flex;
+  padding: 2em 10em;
+}
+
+.form-image {
+  text-align: left;
+  width: 70%;
+}
+
+.form {
+  text-align: left;
+}
+</style></head>
+  <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><header><div class="left-header"><img class="airbnb-logo" src="./React App_files/air-bnb-logo-png-5.png" alt="Airbnb-Logo"><h1 class="airbnb-header"><a class="airbnb-home-link" href="http://localhost:3001/">airbnb</a></h1></div><div class="right-header"><div class="header-buttons"><div class="explore-buttons"><button class="look-homes-button"><a href="http://localhost:3001/properties">Look for homes</a></button><button class="host-homes-button"><a href="http://localhost:3001/properties/host">Host your home</a></button><button class="logout-button">Logout</button></div></div></div></header><div><img class="living-room" src="./React App_files/horizontal-blinds-living2-1795x933-1030x535.jpg"><div class="how-to-container"><h1>How to start hosting</h1><div><p>Listing your home is simple. Fill out the and you're good to go. All we require is your address, zipcode, and the city location.</p></div></div><div><hr><h1>Payments made simple</h1><div class="steps-container"><div class="host-steps"><h3>Charge what you want</h3><p>You always get to pick your price. Need help? We have tools to help you match demand in your area.</p></div><div class="host-steps"><h3>Pay low fees</h3><p>You always get to pick your price. Need help? We have tools to help you match demand in your area.</p></div><div class="host-steps"><h3>Get paid quickly</h3><p>Once a guest checks in, we can send your money by Paypal, direct deposit, or other available methods.</p></div></div><div class="form-container"><div style="
+    text-align: left;
+"><img class="form-image" src="./React App_files/pexels-photo-545012.jpeg"></div><div class="form"><form><input id="address" placeholder="Enter address" value=""><input id="zipcode" placeholder="Enter a zipcode" value=""><select id="city"><option value="">Select a City</option><option value="1">New York</option></select><button>Submit</button></form></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/0.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.4563e306aba8ff0faccb.hot-update.js"></script>
+
+</body></html>
