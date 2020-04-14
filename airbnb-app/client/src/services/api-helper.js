@@ -68,3 +68,5 @@ export const updateProperty = (item) =>
 // ############################################
 
 export const listCities = () => api.get(`/cities`)
+
+export const listCityWithProperties = (id) => api.get(`cities/${id}/properties`)

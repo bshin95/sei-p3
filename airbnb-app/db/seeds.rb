@@ -83,6 +83,279 @@ newyork = City.create(
     country: "United States"
   }
 )
+
+phoenix = City.create(
+  {
+    name: "Phoenix",
+    state: "Arizona",
+    country: "United States"
+  }
+)
+
+losangeles = City.create(
+  {
+    name: "Los Angeles",
+    state: "California",
+    country: "United States"
+  }
+)
+
+mailbu = City.create(
+  {
+    name: "Mailbu",
+    state: "California",
+    country: "United States"
+  }
+)
+
+sacramento = City.create(
+  {
+    name: "Sacramento",
+    state: "California",
+    country: "United States"
+  }
+)
+
+sandiego = City.create(
+  {
+    name: "San Diego",
+    state: "California",
+    country: "United States"
+  }
+)
+
+sanfrancisco = City.create(
+  {
+    name: "San Francisco",
+    state: "California",
+    country: "United States"
+  }
+)
+
+denver = City.create(
+  {
+    name: "Denver",
+    state: "Colorado",
+    country: "United States"
+  }
+)
+  
+miami = City.create(
+  {
+    name: "Miami",
+    state: "Florida",
+    country: "United States"
+  }
+)
+
+orlando = City.create(
+  {
+    name: "Orlando",
+    state: "Florida",
+    country: "United States"
+  }
+)
+
+tampa = City.create(
+  {
+    name: "Tampa",
+    state: "Florida",
+    country: "United States"
+  }
+)
+  
+tallahassee = City.create(
+  {
+    name: "Tallahassee",
+    state: "Florida",
+    country: "United States"
+  }
+)
+
+atlanta = City.create(
+  {
+    name: "Atlanta",
+    state: "Georgia",
+    country: "United States"
+  }
+)
+
+
+honolulu = City.create(
+  {
+    name: "Honolulu",
+    state: "Hawaii",
+    country: "United States"
+  }
+)
+
+chicago = City.create(
+  {
+    name: "Chicago",
+    state: "Illinois",
+    country: "United States"
+  }
+)
+
+batonrouge = City.create(
+  {
+    name: "Baton Rouge",
+    state: "Louisana",
+    country: "United States"
+  }
+)
+
+balitmore = City.create(
+  {
+    name: "Balitmore",
+    state: "Maryland",
+    country: "United States"
+  }
+)
+
+boston = City.create(
+  {
+    name: "Boston",
+    state: "Masschusetts",
+    country: "United States"
+  }
+)
+
+detroit = City.create(
+  {
+    name: "Detroit",
+    state: "Michigan",
+    country: "United States"
+  }
+)
+
+lasvegas = City.create(
+  {
+    name: "Las Vegas",
+    state: "Nevada",
+    country: "United States"
+  }
+)
+
+atlanticcity = City.create(
+  {
+    name: "Atlantic City",
+    state: "New Jersey",
+    country: "United States"
+  }
+)
+
+cleveland = City.create(
+  {
+    name: "Cleveland",
+    state: "Ohio",
+    country: "United States"
+  }
+)
+
+oklahomacity = City.create(
+  {
+    name: "Oklahoma City",
+    state: "Oklahoma",
+    country: "United States"
+  }
+)
+
+portland = City.create(
+  {
+    name: "Portland",
+    state: "Oregon",
+    country: "United States"
+  }
+)
+
+philadelphia = City.create(
+  {
+    name: "Philadelphia",
+    state: "Pennsylvania",
+    country: "United States"
+  }
+)
+
+newport = City.create(
+  {
+    name: "New Port",
+    state: "Rhode Island",
+    country: "United States"
+  }
+)
+
+nashville = City.create(
+  {
+    name: "Nashville",
+    state: "Tennesse",
+    country: "United States"
+  }
+)
+
+austin =City.create(
+  {
+    name: "Austin",
+    state: "Texas",
+    country: "United States"
+  }
+)
+
+dallas = City.create(
+  {
+    name: "Dallas",
+    state: "Texas",
+    country: "United States"
+  }
+)
+
+houston = City.create(
+  {
+    name: "Houston",
+    state: "Texas",
+    country: "United States"
+  }
+)
+
+sanantonio = City.create(
+  {
+    name: "San Antonio",
+    state: "Texas",
+    country: "United States"
+  }
+)
+
+saltlakecity = City.create(
+  {
+    name: "Salt Lake City",
+    state: "Utah",
+    country: "United States"
+  }
+)
+
+washingtondc = City.create(
+  {
+    name: "Washington D.C.",
+    state: "Virgina",
+    country: "United States"
+  }
+)
+
+virginabeach = City.create(
+  {
+    name: "Virgina Beach",
+    state: "Virgina",
+    country: "United States"
+  }
+)
+
+seattle = City.create(
+  {
+    name: "Seattle",
+    state: "Washington",
+    country: "United States"
+  }
+)
 p "Created #{City.count} cities"
 
 Property.create!(

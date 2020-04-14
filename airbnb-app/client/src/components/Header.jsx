@@ -20,22 +20,30 @@ export default function Header(props) {
         <div className="header-buttons">
           <div className="explore-buttons">
             {/* add the onclick function to these pages */}
-            <button className="look-homes-button">
+            <button className="header-buttons">
               <Link to="/properties">Look for homes</Link>
             </button>
-            <button className="host-homes-button">
+            <button className="header-buttons">
               <Link to="/properties/host">Host your home</Link>
+            </button>
+            <button className="header-buttons">
+              <Link to="/users/current-user">Account</Link>
             </button>
             {props.currentUser ? (
               <>
-                {/* <p>Welcome, {props.currentUser.username}</p> */}
-                <button className="logout-button" onClick={props.handleLogout}>
-                  Logout
-                </button>
+                <Link>
+                  {/* <p>Welcome, {props.currentUser.username}</p> */}
+                  <button
+                    className="header-buttons"
+                    onClick={props.handleLogout}
+                  >
+                    Logout
+                  </button>
+                </Link>
               </>
             ) : (
               <button
-                className="login-register-button"
+                className="header-buttons"
                 onClick={props.handleLoginButton}
               >
                 Login/Register
