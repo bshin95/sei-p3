@@ -128,7 +128,7 @@ class UserListings extends Component {
             City:
             <div>
               <select
-                id="address"
+                id="city"
                 value={propertyToEdit.city}
                 onChange={this.handleInputChange}
               >
@@ -155,24 +155,56 @@ class UserListings extends Component {
         </Modal>
         {id && (
           <div>
-            <h1>Your Personal Information</h1>
-            <div>
-              <p>
-                Name: {first_name} {last_name}
-              </p>
-              <p>Username: {username}</p>
-              <p>Email: {email}</p>
-              <p>Address: {address}</p>
-              <p>Zip: {zipcode}</p>
-              <p>City: {city}</p>
-              <p>State: {state}</p>
-              <p>Country: {country}</p>
+            <h1>Account Information</h1>
+            <div className="information-container">
+              <div className="account-info">
+                <div className="information-line">
+                  <h3 className="account-header">Name</h3>
+                  <p>
+                    {first_name} {last_name}
+                  </p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">Username</h3>
+                  <p>{username}</p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">Email</h3>
+                  <p>{email}</p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">Address</h3>
+                  <p>{address}</p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">Zipcode</h3>
+                  <p>{zipcode}</p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">City</h3>
+                  <p>{city}</p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">State</h3>
+                  <p>{state}</p>
+                </div>
+                <div className="information-line">
+                  <h3 className="account-header">Country</h3>
+                  <p>{country}</p>
+                </div>
+              </div>
+              <div className="account-protection">
+                <h3>What info is shared with others?</h3>
+                <p>
+                  Airbnb only releases contact information for hosts and guests
+                  after a reservation is confirmed
+                </p>
+              </div>
             </div>
-
-            <div>
+            <div className="user-listing-container">
               <h1>Your Listings</h1>
 
-              <div className="row col-sm-12">
+              <div className="listings-container">
                 {properties.map((property, i) => (
                   <div
                     key={i}
@@ -194,13 +226,13 @@ class UserListings extends Component {
                             this.toggleModal
                           )
                         }}
-                        className="btn ml-3 btn-primary"
+                        className="edit-button"
                       >
                         Edit Property
                       </button>
                       <button
                         onClick={() => this.deleteProperty(property.id)}
-                        className="btn mr-3 btn-danger"
+                        className="delete-button"
                       >
                         Delete Property
                       </button>

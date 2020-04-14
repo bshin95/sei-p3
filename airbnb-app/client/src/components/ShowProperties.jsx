@@ -12,47 +12,47 @@ class ShowProperties extends Component {
     return (
       <div>
         <h1>Featured Listings</h1>
-        <div className="city-listings-row-one">
-          <div>
-            <h2 className="new-york">
-              <Link>New York</Link>
+        <div className="city-listings-row">
+          <div className="new-york">
+            <h2 className="city-name">
+              <Link to="/cities/New York">New York</Link>
             </h2>
           </div>
-          <div>
-            <h2 className="los-angeles">
-              <Link>Los Angeles</Link>
+          <div className="los-angeles">
+            <h2 className="city-name">
+              <Link to="/cities/Los Angeles">Los Angeles</Link>
             </h2>
           </div>
-          <div>
-            <h2 className="chicago">
-              <Link>Chicago</Link>
+          <div className="chicago">
+            <h2 className="city-name">
+              <Link to="/cities/Chicago">Chicago</Link>
             </h2>
           </div>
-          <div>
-            <h2 className="miami">
-              <Link>Miami</Link>
+          <div className="miami">
+            <h2 className="city-name">
+              <Link to="/cities/Miami">Miami</Link>
             </h2>
           </div>
         </div>
-        <div className="city-listings-row-two">
-          <div>
-            <h2 className="paris">
-              <Link>Paris</Link>
+        <div className="city-listings-row">
+          <div className="san-francisco">
+            <h2 className="city-name">
+              <Link to="/cities/San Francisco">San Francisco</Link>
             </h2>
           </div>
-          <div>
-            <h2 className="london">
-              <Link>London</Link>
+          <div className="houston">
+            <h2 className="city-name">
+              <Link to="/cities/Houston">Houston</Link>
             </h2>
           </div>
-          <div>
-            <h2 className="tokyo">
-              <Link>Tokyo</Link>
+          <div className="seattle">
+            <h2 className="city-name">
+              <Link to="/cities/Seattle">Seattle</Link>
             </h2>
           </div>
-          <div>
-            <h2 className="seoul">
-              <Link>Seoul</Link>
+          <div className="las-vegas">
+            <h2 className="city-name">
+              <Link to="/cities/Las Vegas">Las Vegas</Link>
             </h2>
           </div>
         </div>

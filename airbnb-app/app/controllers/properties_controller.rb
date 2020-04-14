@@ -4,10 +4,14 @@ class PropertiesController < ApplicationController
 
   # GET /properties
   def index
+    @city = City.find_by(name: params[:city_id])
+
+    @cityWithProperties = Property.where(city_id: @city.id)
+
     @properties = Property.all
 
-    render json: @properties
-  end
+    render json: {properties: @properties, cityWithProperties: @cityWithProperties}
+  end 
 
   # GET /properties/1
   def show

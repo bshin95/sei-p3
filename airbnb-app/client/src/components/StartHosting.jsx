@@ -81,17 +81,24 @@ class StartHosting extends Component {
             <form className="form-fillout" onSubmit={this.addProperty}>
               <input
                 id="address"
+                className="form-bar"
                 placeholder="Enter address"
                 value={address}
                 onChange={this.handleInputChange}
               />
               <input
                 id="zipcode"
+                className="form-bar"
                 placeholder="Enter a zipcode"
                 value={zipcode}
                 onChange={this.handleInputChange}
               />
-              <select id="city" onChange={this.handleInputChange} value={city}>
+              <select
+                className="form-bar"
+                id="city"
+                onChange={this.handleInputChange}
+                value={city}
+              >
                 <option value="">Select a City</option>
                 {cities.map((c, i) => (
                   <option key={i} value={c.id}>
@@ -99,6 +106,7 @@ class StartHosting extends Component {
                   </option>
                 ))}
               </select>
+              <br></br>
               <button>Submit</button>
             </form>
           </div>

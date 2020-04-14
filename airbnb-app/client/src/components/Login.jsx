@@ -8,7 +8,7 @@ const Login = (props) => {
     <div className="auth-container">
       <h2>Login</h2>
       <hr />
-      <form
+      <form className="login-form"
         onSubmit={(e) => {
           e.preventDefault()
           history.push("/")

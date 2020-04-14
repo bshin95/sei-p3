@@ -9,6 +9,9 @@ import StartHosting from "./components/StartHosting"
 import HostingConfirmation from "./components/HostingConfirmation"
 import UserListings from "./components/UserListings"
 import HomePage from "./components/HomePage"
+import Menu from "./components/Menu"
+import ShowCity from "./components/ShowCity"
+import BookingConfirmation from "./components/BookingConfirmation"
 import "./App.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -121,6 +124,17 @@ class App extends Component {
           component={HostingConfirmation}
         />
         <Route exact path="/users/:id" component={UserListings} />
+        <Route
+          exact
+          path="/cities/:name"
+          render={(props) => <ShowCity {...props} cities={this.state.cities} />}
+        />
+        <Route
+          exact
+          path="/booking-confirmation"
+          component={BookingConfirmation}
+        />
+        <Menu />
         <Footer />
       </div>
     )
