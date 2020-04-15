@@ -2,6 +2,8 @@
 
 ![Airbnb](https://evckmir.files.wordpress.com/2020/03/air-bnb.jpg?w=1120)
 
+https://home-hosting.surge.sh/ - hosted on Surge
+
 # Description
 
 This is an Airbnb-based app built on Ruby on Rails integrating React as the front-end. The objective of the app is to allow users to listing their property for rental for a duration of time. Users can be split into two categories either: hosts or temporary tenants. Tenants can explore listings on the app and book houses, apartments, condos, studios, etc by contacting the host.
@@ -76,21 +78,38 @@ Built on lucidchart - https://www.lucidchart.com/invitations/accept/e66b4424-599
 
 The Airbnb App is built on Ruby on Rails as the backend and integrates React as the frontend.
 
-## List of server-side routes
+Other technologies:
 
-homepage - http://localhost:3000/app/home
+- React bootstrap
+- React modal
+- Heroku
+- Surge
 
-login - http://localhost:3000/app/login
+# List of server-side routes
 
-signup - http://localhost:3000/app/signup
+## Login
 
-list your home - http://localhost:3000/app/listhome
+auth_login POST /auth/login(.:format) - authentication#login
+auth_verify GET /auth/verify(.:format) - authentication#verify
 
-property listings - http://localhost:3000/app/listings
+## Tables
 
-user listing - http://localhost:3000/app/user/:user/listing/:listings
+cities GET /cities(.:format) - cities#index
+POST /cities(.:format) - cities#create
+city GET /cities/:id(.:format) - cities#show
+properties GET /properties(.:format) - properties#index
+POST /properties(.:format) - properties#create
+property GET /properties/:id(.:format) - properties#show
+users GET /users(.:format) - users#index
+POST /users(.:format) - users#create
+user GET /users/:id(.:format) - users#show
 
-user individual listing - http://localhost:3000/app/user/:user/listing/:listing/:indivudallisting
+## Custom routes
+
+host GET /properties/host(.:format) properties#host
+index GET /cities/:city_id/properties(.:format) properties#index
+start GET /properties/host/start(.:format) properties#start
+current_user GET /users/current-user(.:format) users#current_user
 
 # Major challenges Expected:
 
@@ -98,6 +117,24 @@ For this app, I expect some of the harder challenges to be the user authenicatio
 
 # Timeframes
 
-Creating wireframes: 2 hours
+## Pre-project planning
 
-Total time: 2 hours
+- Creating wireframes: 2 hours
+- Creating README: 2 hours
+
+## Backend
+
+- Creating tables: 1 hour
+- Creating controllers/routes: 2-3 hours
+- Setting up models: 30 mins
+- Seeding data: 30 mins
+
+## Frontend
+
+- Creating react components (homepage, header, footer, etc.): 2 days
+- Creating functionality in each component: 2-3 days
+- CSS: 2 days+
+
+### Total expected time:
+
+~ 6 to 7 days

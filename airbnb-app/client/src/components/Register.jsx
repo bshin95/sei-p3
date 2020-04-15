@@ -97,7 +97,12 @@ const Register = (props) => {
               onChange={props.handleChange}
             />
           </div>
-          <button className="register-button">Register</button>
+          <button
+            className="register-button"
+            onClick={(event) => (window.location.href = "/")}
+          >
+            Register
+          </button>
         </form>
       </div>
     </div>
